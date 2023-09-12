@@ -2,23 +2,131 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
+    /* background-color: purple; */
 }
-
+.main-home{
+    position: relative;
+    overflow: hidden;
+}
+.video-container-home {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120%;
+    z-index: -1;
+}
+#video-home {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
 .nav-container {
-    display: flex;
+    display: grid;
     justify-content: space-between;
     align-items: center;
+    position: fixed; /* Fija el elemento en la pantalla */
+    width: 100%; /* Ocupa todo el ancho de la pantalla */
+    /* z-index: 1000;  */
     padding: 10px 20px;
-    background-color: #00aaff;
+    background-color: rgba(6, 27, 121, 0.5);
     color: white;
 }
+.nav-redes{
+    display: flex;
+    justify-content: space-between;
+    color: aliceblue;
+}
+.nav-redes img, a{
+    color: aliceblue;
+}
+.nav-redes-comunidad img{
+  width: 45x; /* Ancho fijo de 15px para todas las imágenes */
+  height: 40px; /* Altura fija de 15px para todas las imágenes */
+  vertical-align: middle; /* Alinea verticalmente las imágenes al centro */
+  margin-right: 5px; /* Mantiene la proporción de aspecto original */
+  transition: transform 0.2s;
+}
+.wtspp img{
+  width: 42px; /* Nuevo ancho de 10px (5px menos) */
+  height: 42px;
+}
+.mail img{
+  width: 33px; /* Nuevo ancho de 10px (5px menos) */
+  height: 33px;
+}
+.nav-redes-comunidad a:hover img {
+  transform: scale(1.4); /* Aumenta el tamaño al 120% */
+}
+.nav-redes-comunidad a {
+  text-decoration: none; /* Elimina el subrayado */
+}
 
+.nav-redes-social{
+  display: flex; /* Hace que los elementos se alineen horizontalmente */
+  justify-content: space-between;
+}
+.nav-redes-social img {
+  width: 45x; /* Ancho fijo de 15px para todas las imágenes */
+  height: 40px; /* Altura fija de 15px para todas las imágenes */
+  vertical-align: middle; /* Alinea verticalmente las imágenes al centro */
+  margin-right: 5px; /* Mantiene la proporción de aspecto original */
+  transition: transform 0.2s;
+}
+.nav-redes-social a:hover img {
+  transform: scale(1.4); /* Aumenta el tamaño al 120% */
+}
+.Face img{
+  margin-right: 8px;
+  width: 340px; /* Nuevo ancho de 10px (5px menos) */
+  height: 40px; 
+}
+.tik img{
+  width: 50px; /* Nuevo ancho de 10px (5px menos) */
+  height: 29px; /* Nuevo alto de 10px (5px menos) */
+  margin-top: 5px;
+}
+.x img{
+  width: 35px; /* Nuevo ancho de 10px (5px menos) */
+  height: 35px; /* Nuevo alto de 10px (5px menos) */
+  margin-top: 3px;
+  margin-right: 0;
+}
+.yout img{
+  width: 40px; /* Nuevo ancho de 10px (5px menos) */
+  height: 40px; /* Nuevo alto de 10px (5px menos) */
+  /* margin-top: 2px; */
+  margin-left: 7px;
+  margin-right: 5px;
+}
+.inst img{
+  
+  margin-right: 0;
+}
+
+.nav-menu{
+    display: flex;
+    margin-top: 15px;
+}
+.nav-marca{
+    font-size: 40px;
+    font-weight: bold;
+}
+.nav-menu-container{
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+}
+.nav-redes-social{
+    display: flex;
+    /* position: fixed; Establecer la posición fija para que no se mueva con el desplazamiento de la página */
+    top: 10px; /* Alinear en la parte superior de la pantalla */
+    right: 40px;
+}
 .nav-logo {
     font-size: 24px;
     font-weight: bold;
 }
-
 .nav-toggle {
     background: none;
     border: none;
@@ -26,27 +134,133 @@ body {
     cursor: pointer;
     margin: 0 10px;
 }
-
-.nav-social {
-    display: flex;
+/* Estilos para el botón hamburguesa */
+.menu-toggle {
+    display: none; /* Oculta el botón por defecto */
+    cursor: pointer;
 }
-
-.nav-social a {
-    margin: 0 5px;
+.bar {
+    width: 30px;
+    height: 4px;
+    background-color: #fff;
+    margin: 4px 0;
+    margin-right: 10px;
+    border-radius: 2px;
 }
-
-.home-content {
+/* Estilos para el menú hamburguesa (inicialmente oculto) */
+.nav-menu-burge {
+    display: none;
+    position: absolute;
+    top: 60px; /* Ajusta la posición según tu diseño */
+    right: 20px; /* Ajusta la posición según tu diseño */
+    background-color: #061b79; /* Fondo del menú */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 10px; /* Espaciado interno */
+    z-index: 1; /* Asegura que esté sobre otros elementos */
+  }
+.nav-menu-burge li {
+    margin-bottom: 10px; /* Espacio entre elementos del menú */
+  }
+.nav-menu-container {
+  display: none;
+}  
+.nav-menu-burge {
+    list-style: none;
+    padding: 0;
+  }
+.nav-menu-burge li{
+    margin-bottom: 10px;
+}
+.show-menu {
+    display: block !important; /* Importante para anular el "display: none" anterior */
+    /* Estilos adicionales para el menú en pantalla pequeña */
+  }
+.home-content h1, h2{
+    font-size: 40px;
+    font-weight: bold;
     text-align: center;
     padding: 100px 0;
 }
-
-.home-content h1 {
-    font-size: 36px;
+.home-content h2{
+    margin-top: 0;
+    padding: 70px 0;
 }
 
-.home-content p {
-    font-size: 18px;
-}
+/* estilos perfil contenedor */
+.perfil-container {
+    display: grid;
+    background-color: #f0f0f0; /* Ajusta el color de fondo según tu preferencia */
+  }
+  .soyAquino {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: x-large;
+    font-weight: bold;
+  }
+  .soyAquino h1{
+    background-color: purple;
+    border-radius: 5px;
+    padding: 10px;
+  }
+  .perfil-container-all{
+    display: flex;
+    align-items: center;
+  }
+  .video-container-perfil {
+    display: flex;
+    /* width: 120%; 
+    height: 100%; */
+    overflow: hidden;
+    /* position: relative; */
+    padding: 20px; 
+    box-sizing: border-box;
+  }
+  /* Estilo adicional para el video */
+  #video-fondo {
+    max-width: 100%; /* El video se ajustará al ancho del contenedor */
+    max-height: 100%;
+    border-radius: 40px; /* Puedes ajustar el valor según tus preferencias */
+  }
+  .perfil-container-descrip{
+    font-size: 47PX;
+    border-radius: 40px;
+    background-color: rgb(138, 192, 236);
+    width: 90%;
+    padding: 10px;
+  }
+  .parte1 {
+    color: black; /* Color de la primera parte */
+  }
+  
+  .parte2 {
+    font-weight: bold;
+    color: purple; /* Color nombre */
+    
+  }
+  
+  .parte3 {
+    color: black; /* Color de la tercera parte */
+  }
+  
+  .parte4 {
+    color: purple; /* Color Aquino*/
+    font-weight: bold;
+  }
+  
+  .parte5 {
+    color: black; /* Color de la quinta parte */
+  }
+  
+  .parte6 {
+    color: teal; /* Color 17años */
+    font-weight: bold;
+  }
+  .parte8 {
+    color: purple; /* Color Medellin*/
+    font-weight: bold;
+  }
+  
 
 .profile-content {
     display: flex;
@@ -77,3 +291,14 @@ footer a {
     text-decoration: none;
     margin: 0 10px;
 }
+
+@media screen and (max-width: 800px) {
+   
+    .perfil-container-all{
+        display: grid;
+    }
+    .perfil-container-descrip{
+        margin-left: 30px;
+    }
+  }
+  

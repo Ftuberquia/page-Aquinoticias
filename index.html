@@ -3,38 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing page</title>
+    <script src="main.js"></script>
+    <title>Cucharon</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="nav-container">
-                <span class="nav-logo">AQUINOTICIAS</span>
-                <button class="nav-toggle">Contactos</button>
-                <button class="nav-toggle">Información</button>
-                <div class="nav-social">
-                    <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
-                    <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
-                    <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+    <main class="main-home">
+        <div class="video-container-home">
+            <video autoplay muted loop id="video-home">
+                <source src="/fondohomo-Aquino.mp4" type="video/mp4">
+            </video>
+        </div>
+        <nav class="nav-container">
+            <div class="nav-redes">
+                <div class="nav-redes-comunidad">
+                    <a class="wtspp" href="#"><img src="/Wtspp3d.png" alt="">Unete a nuestra comunidad</a>
+                    <a class="mail" href="#"><img src="/Mail3d.png" alt="">Aquino@ejemplo.correo</a>
+                </div>
+                <div class="nav-redes-social">
+                    <a class="face" href=""><img src="/Face3d.png" alt="Facebook"></a>
+                    <a class="x" href=""><img src="/X3d.png" alt="Twitter"></a>
+                    <a class="yout" href=""><img src="/Youtube3d.png" alt="Youtube"></a>
+                    <a class="inst" href=""><img src="/Insta3d.png" alt="Instagram"></a>
+                    <a class="tik" href=""><img src="/Tiktok3d.png" alt="tiktok"></a>
                 </div>
             </div>
-        </nav>
-    </header>
-    <section class="home">
+            <div class="nav-menu">
+                <div class="nav-marca">AQUINOTICIAS </div>
+                <div class="nav-menu-container">
+                    <ul class="nav-menu-normal">
+                        <li class="nav-menu-li">Inicio</li>
+                        <li class="nav-menu-li">Conoce a Aquino</li>
+                        <li class="nav-menu-li">Candidatura</li>
+                        <li class="nav-menu-li">Movimientos</li>
+                        <li class="nav-menu-li">Contactos</li>
+                        <li class="nav-menu-li">Prensa</li>                   
+                    </ul>
+                    <ul class="nav-menu-burge">
+                        <li class="nav-menu-li">Inicio</li>
+                        <li class="nav-menu-li">Conoce a Aquino</li>
+                        <li class="nav-menu-li">Candidatura</li>
+                        <li class="nav-menu-li">Movimientos</li>
+                        <li class="nav-menu-li">Contactos</li>
+                        <li class="nav-menu-li">Prensa</li>   
+                        <a href="#"><img src="whatsapp-icon.png" alt="">Unete a nuestra comunidad</a>
+                        <a href="#"><img src="correo-icon.png" alt="">Aquino@ejemplo.correo</a>                
+                    </ul>
+                </div>
+            </div>
+            <div class="menu-toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </nav>      
         <div class="home-content">
-            <h1>Mi Nombre</h1>
-            <img src="./img/perfilAquino.jpeg" alt="Mi Foto">
-            <p>Títulos de estudio</p>
+            <h1>AQUINO</h1>
+            <h2>Candidato al Concejo de Medellin</h2>
         </div>
-    </section>
-    <section class="profile">
-        <div class="profile-content">
-            <img src="./img" alt="Descripción del Perfil">
-            <p>Descripción del perfil...</p>
+        
+    </main>
+
+    <section class="perfil-container">
+        <div class="soyAquino">
+            <h1>Soy Aquino</h1>
+        </div>
+        <div class="perfil-container-all">
+            <div class="video-container-perfil">
+                <video autoplay id="video-fondo"  controls>
+                    <source src="/perfil-Aquino.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="perfil-container-descrip">
+                <span class="parte1">Soy </span>
+                <span class="parte2">Jose Luis Marín, </span>
+                <span class="parte3">quizás me conoces como </span>
+                <span class="parte4">Aquino, </span>
+                <span class="parte5">Abogado y candidato a Magister en Derecho y Sociedad en mi amada universidad de Antioquia, </span>
+                <span class="parte6">Hace 17 años trabajo, </span>
+                <span class="parte7">con sectores sociales y populares de</span>
+                <span class="parte8">Medellín.</span>
+ 
+            </div>         
         </div>
     </section>
     <section class="video">
+        <img src="./img/perfil2Aquin0.jpeg" alt="Descripción del Perfil">
         <div class="video-content">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/TU_ID_DE_VIDEO" frameborder="0" allowfullscreen></iframe>
         </div>
@@ -50,6 +104,13 @@
                     <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
                     <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
                 </div>
+            </div>
+            <div>
+                <span class="nav-logo">Fatube Solutions</span>
+                <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+                <a href="#"><img src="linkedin-icon.png" alt="Linkedin"></a>
+                <a href="#"><img src="Github-icon.png" alt="Github"></a>
+
             </div>
         </nav>
     </footer>
