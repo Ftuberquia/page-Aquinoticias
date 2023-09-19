@@ -10,10 +10,12 @@
 <body>
     <main class="main-home">
         <div class="video-container-home">
-            <video autoplay muted loop id="video-home">
-                <source src="/fondohomo-Aquino.mp4" type="video/mp4">
+            <video autoplay muted id="video-home">
+                <source src="/fondohome-Aquino.mp4" type="video/mp4">
             </video>
+            <div class="background-image"></div>
         </div>
+        
         <nav class="nav-container">
             <div class="nav-redes">
                 <div class="nav-redes-comunidad">
@@ -21,25 +23,25 @@
                     <a class="mail" href="#"><img src="/Mail3d.png" alt="">Aquino@ejemplo.correo</a>
                 </div>
                 <div class="nav-redes-social">
-                    <a class="face" href=""><img src="/Face3d.png" alt="Facebook"></a>
-                    <a class="x" href=""><img src="/X3d.png" alt="Twitter"></a>
-                    <a class="yout" href=""><img src="/Youtube3d.png" alt="Youtube"></a>
-                    <a class="inst" href=""><img src="/Insta3d.png" alt="Instagram"></a>
-                    <a class="tik" href=""><img src="/Tiktok3d.png" alt="tiktok"></a>
+                    <a class="face" href="https://www.facebook.com/AquinoTicias1"><img src="/Face3d.png" alt="Facebook"></a>
+                    <a class="x" href="https://twitter.com/AquinoTicias1"><img src="/X3d.png" alt="Twitter"></a>
+                    <a class="yout" href="https://www.youtube.com/@joseps86"><img src="/Youtube3d.png" alt="Youtube"></a>
+                    <a class="inst" href="https://www.instagram.com/aquinoticias1/"><img src="/Insta3d.png" alt="Instagram"></a>
+                    <a class="tik" href="https://www.tiktok.com/@aquinoticias"><img src="/Tiktok3d.png" alt="tiktok"></a>
                 </div>
             </div>
             <div class="nav-menu">
                 <div class="nav-marca">AQUINOTICIAS </div>
                 <div class="nav-menu-container">
                     <ul class="nav-menu-normal">
-                        <li class="nav-menu-li">Inicio</li>
-                        <li class="nav-menu-li">Conoce a Aquino</li>
-                        <li class="nav-menu-li">Candidatura</li>
-                        <li class="nav-menu-li">Movimientos</li>
-                        <li class="nav-menu-li">Contactos</li>
-                        <li class="nav-menu-li">Prensa</li>                   
+                        <li class="nav-menu-li"><a href="#conoceAquino">Inicio</a></li>
+                        <li class="nav-menu-li"><a href="#conoceAquino">Conoceme</a></li>
+                        <li class="nav-menu-li"><a href="#conoceAquino">Candidatura</a></li>
+                        <li class="nav-menu-li"><a href="#conoceAquino">Movimientos</a></li>
+                        <li class="nav-menu-li"><a href="#conoceAquino">Contactanos</a></li>
+                        <li class="nav-menu-li"><a href="#conoceAquino">Youtube</a></li>                           
                     </ul>
-                    <ul class="nav-menu-burge">
+                    <!-- <ul class="nav-menu-burge">
                         <li class="nav-menu-li">Inicio</li>
                         <li class="nav-menu-li">Conoce a Aquino</li>
                         <li class="nav-menu-li">Candidatura</li>
@@ -48,7 +50,7 @@
                         <li class="nav-menu-li">Prensa</li>   
                         <a href="#"><img src="whatsapp-icon.png" alt="">Unete a nuestra comunidad</a>
                         <a href="#"><img src="correo-icon.png" alt="">Aquino@ejemplo.correo</a>                
-                    </ul>
+                    </ul> -->
                 </div>
             </div>
             <div class="menu-toggle">
@@ -58,15 +60,25 @@
             </div>
         </nav>      
         <div class="home-content">
-            <h1>AQUINO</h1>
-            <h2>Candidato al Concejo de Medellin</h2>
+            <div class="home-content-presentacion">
+                <span>AQUINO</span>
+                <span>Candidato al Concejo de Medellin</span>
+                <!-- <h1>AQUINO</h1>
+                <h2>Candidato al Concejo de Medellin</h2> -->
+            </div>
+             <img class="Aquinologo" src="../AquinoPerfil.png" alt="Descripción del Perfil">
         </div>
+        <!-- <div class="video-home-cel">
+            <video autoplay muted loop id="video-cel">
+                <source src="/fondohomo-Aquino.mp4" type="video/mp4">
+            </video>
+        </div> -->
         
     </main>
 
     <section class="perfil-container">
-        <div class="soyAquino">
-            <h1>Soy Aquino</h1>
+        <div class="soyAquino" id="conoceAquino">
+            <h1>Conoceme</h1>
         </div>
         <div class="perfil-container-all">
             <div class="video-container-perfil">
@@ -76,43 +88,40 @@
             </div>
             <div class="perfil-container-descrip">
                 <span class="parte1">Soy </span>
-                <span class="parte2">Jose Luis Marín, </span>
+                <span class="parte2">José Luis Marín, </span>
                 <span class="parte3">quizás me conoces como </span>
                 <span class="parte4">Aquino, </span>
-                <span class="parte5">Abogado y candidato a Magister en Derecho y Sociedad en mi amada universidad de Antioquia, </span>
-                <span class="parte6">Hace 17 años trabajo, </span>
-                <span class="parte7">con sectores sociales y populares de</span>
+                <span class="parte5">Abogado y candidato a Magister en Derecho y Sociedad en mi amada universidad de Antioquia. </span>
+                <span class="parte6">Hace 17 años, </span>
+                <span class="parte7">Trabajo con sectores sociales y populares de</span>
                 <span class="parte8">Medellín.</span>
  
             </div>         
         </div>
     </section>
     <section class="video">
-        <img src="./img/perfil2Aquin0.jpeg" alt="Descripción del Perfil">
         <div class="video-content">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/TU_ID_DE_VIDEO" frameborder="0" allowfullscreen></iframe>
+            <iframe width="350" height="200" src="https://www.youtube.com/embed/TU_ID_DE_VIDEO" frameborder="0" allowfullscreen></iframe>
         </div>
     </section>
+
     <footer>
-        <nav>
-            <div class="nav-container">
+        <div class="foot-container">
+            <div class="foot-container-redes">
                 <span class="nav-logo">AQUINOTICIAS</span>
-                <button class="nav-toggle">Contactos</button>
-                <button class="nav-toggle">Información</button>
-                <div class="nav-social">
-                    <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
-                    <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
-                    <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
-                </div>
+                <button class="nav-toggle">Contactanos</button>
+                <a class="face" href="https://www.facebook.com/AquinoTicias1"><img src="/Face3d.png" alt="Facebook"></a>
+                <a class="x" href="https://twitter.com/AquinoTicias1"><img src="/X3d.png" alt="Twitter"></a>
+                <a class="yout" href="https://www.youtube.com/@joseps86"><img src="/Youtube3d.png" alt="Youtube"></a>
+                <a class="inst" href="https://www.instagram.com/aquinoticias1/"><img src="/Insta3d.png" alt="Instagram"></a>
+                <a class="tik" href="https://www.tiktok.com/@aquinoticias"><img src="/Tiktok3d.png" alt="tiktok"></a>
             </div>
             <div>
-                <span class="nav-logo">Fatube Solutions</span>
-                <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
-                <a href="#"><img src="linkedin-icon.png" alt="Linkedin"></a>
-                <a href="#"><img src="Github-icon.png" alt="Github"></a>
-
-            </div>
-        </nav>
+                <a class="" href=""><img src="/Aquinoticias/Fatube/Fatube-logomini2.png" alt=""></a>
+                <!-- <a href="#"><img src="facebook-icon.png" alt="Facebook"></a> -->
+                <a href="https://www.linkedin.com/in/franktuberquia"><img src="/Aquinoticias/Fatube/logolinkedin.png" alt="Linkedin"></a>
+           </div>
+        </div>
     </footer>
 </body>
 </html>

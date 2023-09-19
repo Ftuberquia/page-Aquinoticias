@@ -9,18 +9,35 @@ body {
     overflow: hidden;
 }
 .video-container-home {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 120%;
+  position: absolute;
+  width: 100%;
+  height: 100vh; /* Ajusta la altura como desees */
+  overflow: hidden;
     z-index: -1;
 }
 #video-home {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; 
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/fondo-malabrs.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: none; /* La imagen estará oculta por defecto */
+}
+/* .video-home-cel{
+  display: none;
+} */
 .nav-container {
     display: grid;
     justify-content: space-between;
@@ -29,7 +46,7 @@ body {
     width: 100%; /* Ocupa todo el ancho de la pantalla */
     /* z-index: 1000;  */
     padding: 10px 20px;
-    background-color: rgba(6, 27, 121, 0.5);
+    background-color: rgba(6, 27, 121, 0.3);
     color: white;
 }
 .nav-redes{
@@ -41,8 +58,8 @@ body {
     color: aliceblue;
 }
 .nav-redes-comunidad img{
-  width: 45x; /* Ancho fijo de 15px para todas las imágenes */
-  height: 40px; /* Altura fija de 15px para todas las imágenes */
+  width: 35x; /* Ancho fijo de 15px para todas las imágenes */
+  height: 30px; /* Altura fija de 15px para todas las imágenes */
   vertical-align: middle; /* Alinea verticalmente las imágenes al centro */
   margin-right: 5px; /* Mantiene la proporción de aspecto original */
   transition: transform 0.2s;
@@ -109,8 +126,10 @@ body {
     margin-top: 15px;
 }
 .nav-marca{
-    font-size: 40px;
-    font-weight: bold;
+  display: flex;
+  font-size: 40px;
+  font-weight: bold;
+  align-items: center;
 }
 .nav-menu-container{
     display: flex;
@@ -148,42 +167,58 @@ body {
     border-radius: 2px;
 }
 /* Estilos para el menú hamburguesa (inicialmente oculto) */
-.nav-menu-burge {
-    display: none;
-    position: absolute;
-    top: 60px; /* Ajusta la posición según tu diseño */
-    right: 20px; /* Ajusta la posición según tu diseño */
-    background-color: #061b79; /* Fondo del menú */
-    border-radius: 5px; /* Bordes redondeados */
-    padding: 10px; /* Espaciado interno */
-    z-index: 1; /* Asegura que esté sobre otros elementos */
-  }
-.nav-menu-burge li {
-    margin-bottom: 10px; /* Espacio entre elementos del menú */
-  }
+
 .nav-menu-container {
-  display: none;
+  display: flex;
 }  
-.nav-menu-burge {
-    list-style: none;
-    padding: 0;
-  }
-.nav-menu-burge li{
-    margin-bottom: 10px;
+.nav-menu-normal{
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  font-size: large;
+  margin-left: 60px;
 }
-.show-menu {
-    display: block !important; /* Importante para anular el "display: none" anterior */
-    /* Estilos adicionales para el menú en pantalla pequeña */
-  }
+.nav-menu-normal li, a{
+  margin-right: 20px;
+  font-weight: bold;
+  text-decoration: none;
+}
+.nav-menu-li a {
+  transition: color 0.1s; 
+}
+.nav-menu-li a:hover {
+  transform: scale(1.2);
+  color: purple; 
+}
+.home-content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.home-content-presentacion{
+  display: grid;
+  font-size: 40px;
+  font-weight: bold;
+  color: whitesmoke;
+  margin-top: 300px;
+  background-color: rgba(128, 0, 128, 0.3);
+  margin-right: 50px;
+  padding: auto;
+  border-radius: 10px;
+}
 .home-content h1, h2{
     font-size: 40px;
     font-weight: bold;
     text-align: center;
     padding: 100px 0;
+    margin-bottom: 10px;
 }
 .home-content h2{
     margin-top: 0;
     padding: 70px 0;
+}
+.Aquinologo{
+  display: flex;
 }
 
 /* estilos perfil contenedor */
@@ -196,12 +231,14 @@ body {
     justify-content: center;
     align-items: center;
     font-size: x-large;
-    font-weight: bold;
+    font-weight: bold;    
   }
   .soyAquino h1{
     background-color: purple;
     border-radius: 5px;
     padding: 10px;
+    color: #f0f0f0;
+    margin-bottom: 0;
   }
   .perfil-container-all{
     display: flex;
@@ -209,10 +246,7 @@ body {
   }
   .video-container-perfil {
     display: flex;
-    /* width: 120%; 
-    height: 100%; */
     overflow: hidden;
-    /* position: relative; */
     padding: 20px; 
     box-sizing: border-box;
   }
@@ -221,9 +255,10 @@ body {
     max-width: 100%; /* El video se ajustará al ancho del contenedor */
     max-height: 100%;
     border-radius: 40px; /* Puedes ajustar el valor según tus preferencias */
+    padding: 10px;
   }
   .perfil-container-descrip{
-    font-size: 47PX;
+    font-size: 41PX;
     border-radius: 40px;
     background-color: rgb(138, 192, 236);
     width: 90%;
@@ -232,26 +267,20 @@ body {
   .parte1 {
     color: black; /* Color de la primera parte */
   }
-  
   .parte2 {
     font-weight: bold;
     color: purple; /* Color nombre */
-    
   }
-  
   .parte3 {
     color: black; /* Color de la tercera parte */
   }
-  
   .parte4 {
     color: purple; /* Color Aquino*/
     font-weight: bold;
   }
-  
   .parte5 {
     color: black; /* Color de la quinta parte */
   }
-  
   .parte6 {
     color: teal; /* Color 17años */
     font-weight: bold;
@@ -260,7 +289,6 @@ body {
     color: purple; /* Color Medellin*/
     font-weight: bold;
   }
-  
 
 .profile-content {
     display: flex;
@@ -279,11 +307,28 @@ body {
     padding: 50px 0;
 }
 
+.foot-container{
+  display: grid;
+}
+.foot-container{
+  display: flex; /* Hace que los elementos se alineen horizontalmente */
+  /* justify-content: space-between; */
+}
+.foot-container img {
+  width: 45x; /* Ancho fijo de 15px para todas las imágenes */
+  height: 40px; /* Altura fija de 15px para todas las imágenes */
+  vertical-align: middle; /* Alinea verticalmente las imágenes al centro */
+  margin-right: 5px; /* Mantiene la proporción de aspecto original */
+  transition: transform 0.2s;
+}
+.foot-container a:hover img {
+  transform: scale(1.4); /* Aumenta el tamaño al 120% */
+}
 footer {
-    background-color: #00aaff;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
+  background-color: rgba(6, 27, 121);
+  color: white;
+  text-align: center;
+  padding: 10px 0;
 }
 
 footer a {
@@ -291,14 +336,81 @@ footer a {
     text-decoration: none;
     margin: 0 10px;
 }
+@media screen and (max-width: 1000px) {
+  .perfil-container-descrip{
+    margin: auto;
+    font-size: xx-large;       
+}
+  }
 
 @media screen and (max-width: 800px) {
-   
-    .perfil-container-all{
+  .video-home-cel{
+    display: block;
+    display: flex;
+  }
+  .video-cel{
+    display: flex;
+    max-width: 100% !important;
+    height: auto !important;
+  }
+   /* quite video y funcina video e imagen */
+  .video-home{
+    display: none;
+  }
+  .background-image {
+    display: block; /* Muestra la imagen en pantallas pequeñas */
+  }
+
+  .nav-redes-social{
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+  .nav-menu-container{
+    display: none;
+  }
+
+  .home-content{
+    display: grid;
+    }
+  .home-content-presentacion{
+    display: grid;
+    font-size: 30px;
+    font-weight: bold;
+    color: whitesmoke;
+    align-items: center;
+    text-align: center;
+    margin-right: 0;
+    margin-bottom: 0;    
+  }
+  .nav-redes{
+    display: grid;
+  }
+  .nav-redes-social img{
+    max-width: 90%;
+    max-height: 70%;
+    /* margin: 0%; */
+  }
+  .mail{
+    display: none;
+  }
+  .perfil-container-all{
         display: grid;
+  }
+  .perfil-container-descrip{
+    margin: auto;
+    font-size:x-large;       
+  }
+  .video-container-perfil{
+    margin: auto;
+  }
+  }
+  
+  @media (max-width: 800px) {
+    .nav-container {
+      display: grid;
+      flex-direction: column; /* Cambia la dirección a columna vertical */
     }
-    .perfil-container-descrip{
-        margin-left: 30px;
-    }
+  
   }
   
