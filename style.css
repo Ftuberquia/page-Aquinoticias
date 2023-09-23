@@ -217,6 +217,14 @@ body {
     margin-top: 0;
     padding: 70px 0;
 }
+.home-comunidad{
+  display: flex;
+  justify-content: center;
+}
+.wtspp2 img{
+  width: 40px; /* Nuevo ancho de 10px (5px menos) */
+  height: 40px;
+}
 .Aquinologo{
   display: flex;
 }
@@ -312,7 +320,8 @@ body {
 }
 .foot-container{
   display: flex; /* Hace que los elementos se alineen horizontalmente */
-  /* justify-content: space-between; */
+  justify-content: space-between;
+  align-items: center;
 }
 .foot-container img {
   width: 45x; /* Ancho fijo de 15px para todas las imágenes */
@@ -330,12 +339,28 @@ footer {
   text-align: center;
   padding: 10px 0;
 }
-
 footer a {
     color: white;
     text-decoration: none;
     margin: 0 10px;
 }
+.tik2 img{
+  width: 50px; /* Nuevo ancho de 10px (5px menos) */
+  height: 29px; /* Nuevo alto de 10px (5px menos) */
+  /* margin-top: 3px; */
+}
+.footer-fatu{
+  /* position: fixed;  */
+  top: 0; /* Puedes ajustar la distancia desde la parte superior si es necesario */
+  right: 0; /* Esto alinea el contenedor en el lado derecho de la pantalla */
+  width: 300px; /* Ancho del contenedor */
+  height: 100%; /* Altura del contenedor, ajusta según tus necesidades */
+}
+.fatube img{
+  width: 150px;
+  height: auto;
+}
+
 @media screen and (max-width: 1000px) {
   .perfil-container-descrip{
     margin: auto;
