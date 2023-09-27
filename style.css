@@ -122,7 +122,7 @@ body {
 
 .nav-menu{
     display: flex;
-    margin-top: 15px;
+    /* margin-top: 15px; */
 }
 .nav-marca{
   display: flex;
@@ -418,13 +418,13 @@ body {
   width: 300px;
   margin: auto;
   perspective: 1000px;
-  position: relative;
+  /* position: absolute; */
   margin-top: 50px;
 }
 .carrusel-container{
   width: 80%;
   position: absolute;
-  animation: rotar 20s infinite linear;
+  animation: rotar 22s infinite linear;
   transform-style: preserve-3d;
 }
 .carrusel-container figure{
