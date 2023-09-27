@@ -333,7 +333,8 @@ body {
 /* Seccion 3 Movimiento*/
 .Movimiento-container {
   display: grid;
-  background-color: white; /* Ajusta el color de fondo según tu preferencia */
+  background-color: white;  
+  margin-bottom: 230px; 
 }
 .Movimiento-titulo {
   display: flex;
@@ -390,26 +391,26 @@ body {
   92.84%, 100% { transform: translateY(-520px); }
 }
 .mov1{
-  background-color: rgb(214, 135, 16);
+  background-color: rgb(211, 146, 50);
   color: whitesmoke;
   border-radius: 5px;
   padding: auto;
 }
 .mov2{
-  background-color: rgb(141, 30, 141);
+  background-color: rgb(180, 59, 180);
   color: whitesmoke;
   border-radius: 5px;
   padding: auto;
 }
 .mov3{
-  background-color: rgb(197, 44, 33);
+  background-color: rgb(187, 64, 55);
   color: whitesmoke;
-  border-radius: 3px;
+  border-radius: 5px;
 }
 .mov4{
-  background-color: rgb(47, 49, 170);
+  background-color: rgb(62, 64, 167);
   color: whitesmoke;
-  border-radius: 3px;
+  border-radius: 5px;
 }
 
 /* Carrusel */
@@ -617,14 +618,36 @@ footer a {
 
 /* media Carrucel */
 @media screen and (max-width: 800px) {
-  .Movimiento-container {
-    width: 100%; /* Ocupa todo el ancho disponible */
+  .movimiento-container-li {
+    width: 400px;
+    overflow: hidden;
+    max-height: 80px; /* Altura máxima para mostrar 1 elemento a la vez */
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 10px;
   }
-  .movimiento-texto {
-    max-height: none; /* Permite que la lista se expanda completamente */
+  .movimiento-texto li {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 40px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: auto;
+    height: 40px; /* Altura de cada elemento de lista */
   }
-  .all-container-carrusel {
-    width: 100%; /* Ocupa todo el ancho disponible */
+  .all-container-carrusel{
+    width: 300px;
+    perspective: 800px;
+    margin-top: 30px;
   }
+  .Movimiento-container li{
+    width: auto; 
+  }
+  .carrusel-container figure{
+    width: 200px;
+    height: 100px;
+  }
+  
 }
   
