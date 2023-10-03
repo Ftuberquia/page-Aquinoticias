@@ -6,6 +6,7 @@ body {
 .main-home{
     position: relative;
     overflow: hidden;
+    margin-bottom: 110px;
 }
 .video-container-home {
   position: absolute;
@@ -249,7 +250,8 @@ body {
 /* estilos perfil contenedor */
 .perfil-container {
     display: grid;
-    background-color: #f0f0f0; /* Ajusta el color de fondo según tu preferencia */
+    background-color: #f0f0f0; 
+    margin-bottom: 90px;
   }
   .soyAquino {
     display: flex;
@@ -342,7 +344,7 @@ body {
   align-items: center;
   font-size: x-large;
   font-weight: bold;  
-  margin-bottom: 20px;  
+  margin-bottom: 40px;  
 }
 .Movimiento-titulo h1{
   background-color: purple;
@@ -490,6 +492,23 @@ body {
   }
 }
 
+/* Periodismo */
+.periodismo-titulo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: x-large;
+  font-weight: bold;  
+  margin-bottom: 20px;  
+}
+.periodismo-titulo h1{
+  background-color: purple;
+  border-radius: 10px;
+  padding: 10px;
+  color: white;
+  margin-bottom: 0;
+}
+
 /* Footer */
 .foot-container{
   display: grid;
@@ -537,13 +556,19 @@ footer a {
   height: auto;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1150px) {
   .perfil-container-descrip{
     margin: auto;
     font-size: xx-large;       
   }
   .foot-container-redes a{
     display: none;
+  }
+}
+@media screen and (max-width: 950px) {
+  .perfil-container-descrip{
+    margin: auto;
+    font-size: x-large;       
   }
 }
 
@@ -637,15 +662,15 @@ footer a {
     height: 40px; /* Altura de cada elemento de lista */
   }
   .all-container-carrusel{
-    width: 300px;
-    perspective: 800px;
+    width: 200px;
+    perspective: 1200px;
     margin-top: 30px;
   }
   .Movimiento-container li{
     width: auto; 
   }
   .carrusel-container figure{
-    width: 200px;
+    width: 220px;
     height: 100px;
   }
   
